@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="hero.css">
+</head>
+<body>
+    
+    <!-- MAYBE ADD SOME IN HEADER -->
+    <header class="header">HEADER</header>
+    <!-- TODO: - change scrollbar in note list item
+                - maybe add carousel with images
+    -->
+
+    <div class="note_wrapper">
+        <div class="notes_column">
+            <a id="note_create" class="notes_list_item">
+                <svg class="ufo-icon__icon" width="24" height="24" role="none" viewBox="0 0 24 24"><path fill="currentColor" d="M13 11V3.5c0-.276-.214-.5-.505-.5h-.99a.507.507 0 0 0-.505.5V11H3.5c-.276 0-.5.214-.5.505v.99c0 .279.23.505.5.505H11v7.5c0 .276.214.5.505.5h.99c.279 0 .505-.23.505-.5V13h7.5c.276 0 .5-.214.5-.505v-.99a.507.507 0 0 0-.5-.505H13z"></path></svg>
+            </a>
+            <!-- Div for test -->
+            <!--<div class="notes_list_item">
+                    <div class="notes_list_item_description">
+                        <h1 class="notes_list_item_heading">
+                            <span class="notes_list_item_heading_text">
+                                THEME!
+                            </span>
+                        </h1>
+                        <span class="notes_list_item_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam esse blanditiis ullam rem maxime architecto velit perspiciatis, dolorum omnis incidunt cum modi dicta nam minus tempore sit non qui laborum?</span>
+                    </div>
+                </div>
+           -->
+            
+        </div>
+
+        <div class="notes_note">
+            <div class="notes_toolbar">
+                <div class="notes_sidebar_left">
+                    <button class="icons bold">
+                        <svg class="ufo-icon" width="24" height="24" role="none" viewBox="0 0 24 24"><path fill="currentColor" d="M1.43 20l5.652-8.056L1.52 4h3.27l4.696 6.81h.868V4h3.204v6.81h.89L19.233 4h3.16l-5.52 7.855 5.697 8.1h-3.605l-4.673-6.698h-.734v6.698h-3.204v-6.698h-.757l-4.673 6.698z"></path></svg>
+                    </button>
+
+                    <button class="icons italics">
+                        <svg class="ufo-icon" width="24" height="24" role="none" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M10.333 12.837h-1.74L7.075 20H5L8.414 4h2.076l-1.496 7.03h1.674L17.43 4h2.387l-7.698 8.011L16.782 20h-2.276z"></path></svg>
+                    </button>
+
+                    <button class="icons underlined">
+                        <svg class="ufo-icon" width="24" height="24" role="none" viewBox="0 0 24 24"><g fill="currentColor" fill-rule="evenodd"><path fill-rule="nonzero" d="M17.58 19.917h-1.586a.25.25 0 0 1-.25-.25v-6.622a7.297 7.297 0 0 1-3.909 1.098c-1.815 0-3.213-.45-4.193-1.35-.981-.9-1.472-2.31-1.472-4.227V4.424a.25.25 0 0 1 .25-.25h1.586a.25.25 0 0 1 .25.25v4.142c0 1.244.304 2.192.912 2.843.607.652 1.504.977 2.69.977a8.31 8.31 0 0 0 2.063-.252 5.45 5.45 0 0 0 1.823-.846V4.424a.25.25 0 0 1 .25-.25h1.586a.25.25 0 0 1 .25.25v15.243a.25.25 0 0 1-.25.25z"></path><rect width="12" height="2" x="6" y="22" rx=".25"></rect></g></svg>
+                    </button>
+                    
+                    <button class="icons crossed">
+                        <svg class="ufo-icon" width="24" height="24" role="none" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"></path><path fill="currentColor" d="M13.052 12H19v2h-5.948v6h-2.12v-6H5v-2h5.932V6H3V4h18v2h-7.948v6z"></path></g></svg>                    </button>
+
+                    <button class="icons listed">
+                        <svg class="ufo-icon" width="20" height="20" role="none" viewBox="0 0 19 19"><path d="M5 1h11v2H5V1zm0 6h11v2H5V7zm0 6h11v2H5v-2zM0 1h3v2H0V1zm0 6h3v2H0V7zm0 6h3v2H0v-2z" fill="currentColor"></path></svg>
+                    </button>
+                </div>
+                <div class="notes_sidebar_right">
+                    <button class="icons delete">
+                        <svg class="ufo-icon__icon" width="20" height="20" role="none" viewBox="0 0 19 19"><path d="M5.809 3.243c.094-.392.268-1.123.432-1.243l3.551-.016c.167.136.346.877.443 1.275.054.23.116.484.194.741H5.611c.083-.269.144-.53.198-.757zM12.583 4c-.151-.171-.309-.814-.404-1.21C11.911 1.679 11.505 0 9.817 0H6.241c-1.716 0-2.13 1.741-2.377 2.78-.092.385-.262 1.103-.406 1.22H1v2h2v7.985C3 15.098 3.887 16 5 16h5.985A2.015 2.015 0 0 0 13 13.985V6h2V4h-2.417z" fill="currentColor" fill-rule="evenodd"></path></svg>
+                    </button>
+
+                    <button class="icons pin">
+                        <svg class="ufo-icon__icon" width="24" height="24" role="none" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M10.86 15.736l-4.797 4.796-1.804.604.602-1.807 4.797-4.795-3.607-3.607a.85.85 0 0 1 0-1.202l.268-.268c1.783-1.783 3.793-2.012 6.247-1.438l3.113-3.11a1.7 1.7 0 0 1 2.404 0l2.404 2.401a1.7 1.7 0 0 1 0 2.406l-3.113 3.11c.594 2.474.37 4.457-1.434 6.252l-.269.267a.85.85 0 0 1-1.201 0l-3.61-3.61z"></path></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="notes_scroll_container">
+                <!-- divs for test also -->
+                <!-- <div class="notes_content_wrapper">
+                    <span class="notes_theme">
+                        <input id="note-theme-input" type="text" value="Note theme" autocomplete="off" >
+                    </span>
+           
+                    <div class="notes_text" contenteditable="true">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Iusto est qui ipsum in expedita reprehenderit sit quae doloremque, sequi numquam, voluptatibus nesciunt deserunt nisi illum ducimus. 
+                        Amet quo neque impedit.        
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="Modal hide">Q</div>
+
+    <!-- maybe add something in footer -->
+    <footer class="footer">JS'ed by Timur Molchanov</footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/idb@3.0.2/build/idb.min.js"></script>
+    <script src="myjs.js"></script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+/* Maybe change storage of color in another pseudo class? */
+:root {
+    --border-color: #c9d0d4;
+    --text-color: rgba(255, 255, 255, .75);
+    --hover-element: rgba(255, 255, 255, 0.245);
+    --notes-theme: #ffffff;
+    --modal-overlay: rgba(38,38,51,0.5);
+}
+
+::selection {
+    background: #fe921f;
+}
+
+body {
+    background-color: #232529;
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+}
+
+/* for text h1 only, then will be deleted */
+/* h1 { 
+    color: #c9d0d4; 
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 46px; 
+    font-weight: 100;
+    line-height: 50px;
+    letter-spacing: 1px;
+    padding: 0 0 40px;    
+} */
+
+.note_wrapper {
+    border-top: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.35);
+    display: flex;
+    flex-direction: row;
+    color: var(--text-color);
+    margin: 4px 7px 10px;
+
+    height: calc(100vh - 135px);
+}
+
+.notes_column {
+    width: 320px;
+    height: 100%;
+    overflow: auto;
+    border-right: 1px solid var(--border-color);
+    flex-shrink: 0;
+}
+
+.notes_note {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.notes_list_item {
+    border-bottom: 1px solid var(--border-color);
+    box-sizing: border-box;
+    height: 72px;
+    display: flex;
+    padding: 12px;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.notes_list_item_description {
+    display: flex;
+    flex-grow: 1;
+    align-items: flex-start;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+.notes_list_item_heading {
+    max-width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    
+    
+ }
+
+ .notes_list_item_heading_text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--notes-theme);
+ }
+
+ span.notes_list_item_text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+    text-overflow: ellipsis;
+ }
+
+.notes_list_item:hover {
+    background-color: var(--hover-element)
+}
+
+.notes_toolbar {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom .2s ease;
+
+    /* flex of toolbar */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2px;
+}
+
+
+.notes_scroll_container {
+    padding-left: 30px;
+    padding-right: 30px;
+    height: calc(100% - 65px);
+    overflow-y: auto;
+}
+
+.notes_content_wrapper {
+    display: flex;
+    
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.notes_container {
+    padding-left: 30px;
+    padding-right: 30px;
+    min-height: 100%;
+    
+    overflow-y: auto;
+}
+
+.notes_theme {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    vertical-align: top;
+    
+
+    display: inline-block; 
+}
+
+#note-theme-input {
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    /* text */
+    color: var(--notes-theme); 
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 35px; 
+    font-weight: 100;
+    line-height: 50px;
+    letter-spacing: 1px;
+    
+    border: 0 solid transparent;
+    outline: 0;
+    background: none;
+}
+
+.notes_text {
+    flex: 1;
+    outline: none;
+    word-break: break-all;
+    word-wrap: break-word;
+    word-break: break-word;
+    line-height: calc(1em + 6px);
+}
+
+.icons {
+    cursor: pointer;
+    outline: 0;
+    background: transparent;
+    border-width: 0;
+    color: var(--text-color);
+
+    display: inline-block;
+    position: relative;
+    overflow: visible;
+    box-sizing: border-box;
+    
+}
+
+.icons:hover {
+    background: var(--hover-element);
+    border-radius: 5px;
+}
+
+/* main button to create notes */
+#note_create {
+    position: relative;
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+    font-weight: inherit;
+    user-select: none;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none;
+    outline: 0;
+    color: var(--text-color);
+    width: 100%;
+    justify-content: center;
+}
+
+/* add text to empty div */
+[contentEditable=true]:empty:not(:focus):before {
+    content: attr(data-placeholder)
+}
+
+.hide {
+    display: none;
+}
+
+.editable {
+    /* maybe add some animation class in future*/
+}
